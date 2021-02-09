@@ -1,2 +1,2 @@
 # Wissenschaftliches-Arbeiten-Gruppenarbeit
-Gruppenmitglieder: Anna Herdick, Kathrin Henkenherm, Romina Dubrow, Leia Betting, Luca Sauer und Tim Ritter
+Gruppenmitglieder: Tim Ritter, Anna Herdick, Kathrin Henkenherm, Romina Dubrow, Leia Betting, Luca Sauer
