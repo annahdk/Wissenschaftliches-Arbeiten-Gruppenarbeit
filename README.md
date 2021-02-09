@@ -1,3 +1,2 @@
 # Wissenschaftliches-Arbeiten-Gruppenarbeit
-Gruppenmitglieder: Anna Herdick, Kathrin Henkenherm, Romina Dubrow, Leia Betting, Luca Sauer
-Ehrenmitglied(Ceo): Tim Ritter
+Gruppenmitglieder: Anna Herdick, Kathrin Henkenherm, Romina Dubrow, Leia Betting, Luca Sauer und Tim Ritter
