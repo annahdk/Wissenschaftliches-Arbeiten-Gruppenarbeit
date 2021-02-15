@@ -4,6 +4,42 @@
 #a)
 
 #b)
+# Eine Funktion, die verschiedene geeignete deskriptive Statistiken
+# für kategoriale Variablen berechnet und ausgibt
+
+deskr_kat <- function(x, ...){
+  if(is.factor(x)){               ## Ist Eingabe ein Faktor?
+    
+    if(is.ordered(x)){            ## Ordinal
+      
+      cat("Ordinales Merkmal\n",
+          "Modalwert:", levels(x)[which.max(table(x))], "\n",
+          "Median:", levels(x)[quantile(x, type = 1, ...)[3]], "\n",
+          "Quantile:", "\n")
+      for (i in 1:5) {
+        p <- c("0%:  ", "25%: ", "50%: ", "75%: ", "100%:")
+        cat("  ", p[i] , levels(x)[quantile(x, type=1, ...)[i]], "\n")
+      }
+    }
+    else{                         ## Nominal
+      
+      cat("Nominales Merkmal\n",
+          "Modalwert:", levels(x)[which.max(table(x))]
+      )
+    }
+  }
+  else stop("Funktion erwartet Faktor")
+}
+
+## Beispiele:
+
+str(housing$Freq) ## Kardinal
+str(housing$Sat)  ## Ordinal
+str(housing$Type) ## Nominal
+
+deskr_kat(housing$Freq)
+deskr_kat(housing$Sat)
+deskr_kat(housing$Type)
 
 #c)
 
