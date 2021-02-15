@@ -20,15 +20,37 @@ deskr_kat <- function(x, ...){
         p <- c("0%:  ", "25%: ", "50%: ", "75%: ", "100%:")
         cat("  ", p[i] , levels(x)[quantile(x, type=1, ...)[i]], "\n")
       }
+      cat("Phi-Streuungsmaß:", phi_str(x))
     }
     else{                         ## Nominal
       
       cat("Nominales Merkmal\n",
-          "Modalwert:", levels(x)[which.max(table(x))]
-      )
+          "Modalwert:", levels(x)[which.max(table(x))], "\n",
+          "Phi-Streuungsmaß:", phi_str(x))
     }
   }
   else stop("Funktion erwartet Faktor")
+}
+
+## Hilfsfunktion Phi-Streuungsmaß
+
+phi_str <- function(x){
+  if(!is.factor(x)) stop("Funktion erwartet Faktor")
+  
+  ## Häufigkeitsverteilung der Levels:
+  K <- length(levels(x)) 
+  hk <- numeric(K)
+  l <- length(x)
+  for (i in 1:K) {
+    s <- sum(x == levels(x)[i])
+    hk[i] <- s/l
+  }
+  
+  ## Berechnung des Phi-Streuungsmaß
+  phi_min <- 2*(1-hk[which.max(table(x))])
+  phi_max <- sum(abs(hk-1/K))
+  
+  phi_min/(phi_min+phi_max)
 }
 
 ## Beispiele:
