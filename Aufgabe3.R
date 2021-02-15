@@ -2,6 +2,28 @@
 # Funktionen
 
 #a)
+## Eine Funktion, die verschiedene geeignete deskriptive Statistiken
+## für metrische Variablen berechnet und ausgibt
+
+deskr <- function(x, ...){
+  cat(" Deskriptive Statistiken: \n",
+  "------------------------\n",
+  "Arithm. Mittel:", mean(x, ...), "\n",
+  "Median:", median(x, ...), "\n",
+  "Varianz:", var(x, ...), "\n",
+  "Std.abw.:", sd(x, ...), "\n",
+  "Range:", range(x, ...), "\n",
+  "Quantile: \n")
+  for(i in 1:5){
+    p <- c("0%:  ", "25%: ", "50%: ", "75%: ", "100%:")
+    cat("  ", p[i] , quantile(x, ...)[i], "\n")
+  }
+  cat(" ------------------------\n")
+}
+
+## Beispiele:
+deskr(iris$Sepal.Length)
+deskr(c(NA, 1:10), na.rm = TRUE)  ## mit NA und weitergereichtem na.rm
 
 #b)
 
