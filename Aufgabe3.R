@@ -12,7 +12,7 @@
 #e)
 
 
-e <- function(x){
+e <- function(x, Ordnung=TRUE,...){
   
      if(is.character(x)){ # wenn es einfach nur ein Vektor ohne geordnete Inhalte ist
     
@@ -26,10 +26,16 @@ e <- function(x){
                                       # ordnen
       
     
-      if(is.factor(x)){ #wenn es ein Faktor ist
+    if(is.factor(x)){ #wenn es ein Faktor ist
       
-         x <-  ordered(x[order(x)]) } # Jetzt ist der Faktor auch, wenn im Vektor die Werte vorher anders angeordnet waren, in der richtigen Reihenfolge
-      
+       if(Ordnung){ # geordneter Faktor
+        x <-  ordered(x[order(x)]) } # Jetzt ist der Faktor auch, wenn im Vektor die Werte vorher anders angeordnet waren, in der richtigen Reihenfolge
+    
+       else { # ungeordneter Faktor, man musste oben die gewuenschte Ordnung des Faktors angeben
+       x <- Faktor_ordnen(x,...)   # ord = Vektor mit gewuenschter Ordnung des Faktors
+        }
+    
+    }
        
   
   
@@ -42,12 +48,24 @@ e <- function(x){
      box <- x[geordnet > g_4 & geordnet < g4] # mittlere werte
     
   
-  ergebnis <- list("niedrig"=q_4,"mittel"=box,"hoch"=q4)
-  return(ergebnis)
+ # ergebnis <- list("niedrig"=q_4,"mittel"=box,"hoch"=q4)
+ # return(ergebnis)
+  
+    cat(" Quantilbasierte Kategorisierung: \n",
+      "------------------------\n",
+      "Niedrig:", as.character(q_4), "\n",
+      "Mittel:", as.character(box), "\n",
+      "Hoch:", as.character(q4), "\n",
+      " ------------------------\n")
   
 }
 
+### Hilfsfunktion fuer ungeordnete Faktoren
 
+Faktor_ordnen <- function(x,ord){
+ x <- factor(x,ordered=TRUE, levels=ord)
+ return(x)
+}
 
 ### Beispiel fuer ordinalen Vektor
 
@@ -68,7 +86,7 @@ Zahlen <- 1:15
 
 
 e(Akademisch1)
-e(Akademisch2)
+e(Akademisch2, Ordnung=FALSE, ord= unique(Akademisch))
 e(Akademisch3)
 e(Zahlen)
 ########################
