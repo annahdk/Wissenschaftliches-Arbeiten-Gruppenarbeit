@@ -16,7 +16,7 @@ deskr <- function(x, ...){
   "Quantile: \n")
   for(i in 1:5){
     p <- c("0%:  ", "25%: ", "50%: ", "75%: ", "100%:")
-    cat("  ", p[i] , quantile(x, ...)[i], "\n")
+    cat("  ", p[i] , quantile(x, type = 2, ...)[i], "\n")
   }
   cat(" ------------------------\n")
 }
