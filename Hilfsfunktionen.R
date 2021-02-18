@@ -20,3 +20,12 @@ phi_str <- function(x){
   
   phi_min/(phi_min+phi_max)
 }
+
+
+# Hilfsfunktion swap: Vertauschen zweier Variablen
+swap <- function(x,y) {
+  eval( parse( text = paste(
+    "swap_unique_var_a<-", substitute(x), ";",
+    substitute(x), "<-", substitute(y), ";",
+    substitute(y), "<-swap_unique_var_a") ), env=parent.frame() )
+}
