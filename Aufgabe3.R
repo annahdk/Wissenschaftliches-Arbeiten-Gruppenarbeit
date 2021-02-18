@@ -40,8 +40,8 @@ e <- function(x, Ordnung=TRUE,...){
   
   
      geordnet <- as.numeric(x) 
-     g_4 <- quantile(geordnet,type = 2)[2] #untere quantilgrenze
-     g4  <- quantile(geordnet,type = 2)[4] #obere quantilgrenze
+     g_4 <- quantile(geordnet,type = 1)[2] #untere quantilgrenze
+     g4  <- quantile(geordnet,type = 1)[4] #obere quantilgrenze
      
      q_4 <- x[geordnet <= g_4] # unteres quantil
      q4 <- x[geordnet >= g4] # oberes quantil
