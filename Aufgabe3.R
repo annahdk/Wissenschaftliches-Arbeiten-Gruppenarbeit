@@ -72,6 +72,86 @@ deskr_kat(housing$Type)
 #e)
 
 
+e <- function(x, Ordnung=TRUE,...){
+  
+     if(is.character(x)){ # wenn es einfach nur ein Vektor ohne geordnete Inhalte ist
+    
+        x <- factor(x,ordered=TRUE, levels=unique(x))}      
+  
+  
+      if(is.numeric(x)|is.integer(x)){ # Wenn es ein Vektor metrischer Art ist
+    
+         x <- factor(x,ordered=TRUE)} # ich habe levels = x rausgenommen damit Zahlen sich
+                                      # egal wie der Vektor angeordnet ist nach ihrer groesse
+                                      # ordnen
+      
+    
+    if(is.factor(x)){ #wenn es ein Faktor ist
+      
+       if(Ordnung){ # geordneter Faktor
+        x <-  ordered(x[order(x)]) } # Jetzt ist der Faktor auch, wenn im Vektor die Werte vorher anders angeordnet waren, in der richtigen Reihenfolge
+    
+       else { # ungeordneter Faktor, man musste oben die gewuenschte Ordnung des Faktors angeben
+       x <- Faktor_ordnen(x,...)   # ord = Vektor mit gewuenschter Ordnung des Faktors
+        }
+    
+    }
+       
+  
+  
+     geordnet <- as.numeric(x) 
+     g_4 <- quantile(geordnet,type = 1)[2] #untere quantilgrenze
+     g4  <- quantile(geordnet,type = 1)[4] #obere quantilgrenze
+     
+     q_4 <- x[geordnet <= g_4] # unteres quantil
+     q4 <- x[geordnet >= g4] # oberes quantil
+     box <- x[geordnet > g_4 & geordnet < g4] # mittlere werte
+    
+  
+ # ergebnis <- list("niedrig"=q_4,"mittel"=box,"hoch"=q4)
+ # return(ergebnis)
+  
+    cat(" Quantilbasierte Kategorisierung: \n",
+      "------------------------\n",
+      "Niedrig:", as.character(q_4), "\n",
+      "Mittel:", as.character(box), "\n",
+      "Hoch:", as.character(q4), "\n",
+      " ------------------------\n")
+  
+}
+
+### Hilfsfunktion fuer ungeordnete Faktoren
+
+Faktor_ordnen <- function(x,ord){
+ x <- factor(x,ordered=TRUE, levels=ord)
+ return(x)
+}
+
+### Beispiel fuer ordinalen Vektor
+
+## zum Testen, koennen wir dann auch wieder rausnehmen
+# Faktor (geordnet)
+Akademisch <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
+Akademisch1 <- factor(Akademisch,ordered=TRUE, levels=unique(Akademisch))
+
+#Faktor(ungeordnet)
+Akademisch2 <- factor(Akademisch)
+
+
+# Character -> muss noch geordnet werden
+Akademisch3 <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
+
+# Metrisch
+Zahlen <- 1:15
+
+
+e(Akademisch1)
+e(Akademisch2, Ordnung=FALSE, ord= unique(Akademisch))
+e(Akademisch3)
+e(Zahlen)
+########################
+
+
 #f) Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
 library(ggplot2)
 #Aufruf mit optionalem vierten Element
