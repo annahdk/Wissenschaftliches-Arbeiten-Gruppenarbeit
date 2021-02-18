@@ -60,35 +60,30 @@ e <- function(x, Ordnung=TRUE,...){
   
 }
 
-### Hilfsfunktion fuer ungeordnete Faktoren
 
-Faktor_ordnen <- function(x,ord){
- x <- factor(x,ordered=TRUE, levels=ord)
- return(x)
-}
 
 ### Beispiel fuer ordinalen Vektor
 
 ## zum Testen, koennen wir dann auch wieder rausnehmen
 # Faktor (geordnet)
-Akademisch <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
-Akademisch1 <- factor(Akademisch,ordered=TRUE, levels=unique(Akademisch))
+#Akademisch <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
+#Akademisch1 <- factor(Akademisch,ordered=TRUE, levels=unique(Akademisch))
 
 #Faktor(ungeordnet)
-Akademisch2 <- factor(Akademisch)
+#Akademisch2 <- factor(Akademisch)
 
 
 # Character -> muss noch geordnet werden
-Akademisch3 <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
+#Akademisch3 <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
 
 # Metrisch
-Zahlen <- 1:15
+#Zahlen <- 1:15
 
 
-e(Akademisch1)
-e(Akademisch2, Ordnung=FALSE, ord= unique(Akademisch))
-e(Akademisch3)
-e(Zahlen)
+#e(Akademisch1)
+#e(Akademisch2, Ordnung=FALSE, ord= unique(Akademisch))
+#e(Akademisch3)
+#e(Zahlen)
 ########################
 
 
