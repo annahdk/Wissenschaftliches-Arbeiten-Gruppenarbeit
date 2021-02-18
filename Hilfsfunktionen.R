@@ -29,3 +29,11 @@ swap <- function(x,y) {
     substitute(x), "<-", substitute(y), ";",
     substitute(y), "<-swap_unique_var_a") ), env=parent.frame() )
 }
+
+
+### Hilfsfunktion fuer ungeordnete Faktoren Aufgabe e)
+
+Faktor_ordnen <- function(x,ord){
+ x <- factor(x,ordered=TRUE, levels=ord)
+ return(x)
+}
