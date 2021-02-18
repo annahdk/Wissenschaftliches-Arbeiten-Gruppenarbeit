@@ -111,24 +111,16 @@ katVis <- function(x, y, z, w=NULL){
   }
 }
 
-# Hilfsfunktion swap
-swap <- function(x,y) {
-  eval( parse( text = paste(
-    "swap_unique_var_a<-", substitute(x), ";",
-    substitute(x), "<-", substitute(y), ";",
-    substitute(y), "<-swap_unique_var_a") ), env=parent.frame() )
-}
-
 ##Testdaten
-x <- factor(sample(rep(letters[1:4], 10), 30))
-y <- ordered(sample(rep(1:7, 10), 30))
-z <- ordered(sample(rep(1:7, 10), 30))
-w <- factor(sample(rep(0:1, 100), 30))
-
-katVis(x,y,z,w)
-katVis(x,y,z)
-katVis(w,y,z,x)
-katVis(w,z)
+#x <- factor(sample(rep(letters[1:4], 10), 30))
+#y <- ordered(sample(rep(1:7, 10), 30))
+#z <- ordered(sample(rep(1:7, 10), 30))
+#w <- factor(sample(rep(0:1, 100), 30))
+#
+#katVis(x,y,z,w)
+#katVis(x,y,z)
+#katVis(w,y,z,x)
+#katVis(w,z)
 
 
 
