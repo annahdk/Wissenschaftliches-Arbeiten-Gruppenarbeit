@@ -118,58 +118,6 @@ f <- factor(sample(c("Professor", "Doktor", "M. Sc.", "B. Sc."), 10, replace = T
 zus_kat(e,f)
 
 
-## Hilfsfunktionen 
-
-# Phi-Koeffizient
-
-phi <- function(x,y){
-  t <- table(x,y)
-  (t[1,1] * t[2,2] - t[1,2] * t[2,1])/sqrt((t[1,1] + t[1,2]) * (t[2,1] + t[2,2])
-                                           * (t[1,1] + t[2,1]) * (t[1,2] + t[2,2]))
-}
-
-# Chi-Koeffizient 
-
-chi <- function(x,y){
-  t <- addmargins(table(x,y))
-  E <- rep(t[-length(levels(x)) + 1,length(levels(y)) + 1], each = length(levels(y))) * 
-    rep((t[length(levels(x)) + 1,-length(levels(y)) + 1]/length(x)), length(levels(x)))
-  sum(((as.vector(table(x,y)) - E)^2) %*% E^(-1))
-}
-
-# Cramér
-
-cramer <- function(x,y){
-sqrt(chi(x,y)/(length(x) * min(length(levels(x)), length(levels(y)))))
-}
-
-# Pearson
-
-pears <- function(x,y){
-  sqrt(chi(x,y)/(chi(x,y) + length(x)))
-}
-
-pears.korr <- function(x,y){
-  pears(x,y) * sqrt(min(length(levels(x)), length(levels(y)))/(min(length(levels(x)), length(levels(y))) - 1))
-}
-
-# Yule 
-
-yule <- function(x,y){
-  t <- table(x,y)
-  (t[1,1] * t[2,2] - t[1,2] * t[2,1])/(t[1,1] * t[2,2] + t[1,2] * t[2,1])
-}
-
-
-# Nullzeilenueberpruefung 
-
-null <- function(x,y){
-  z <- ifelse(addmargins(table(x,y))[,length(levels(y)) + 1] != 0, FALSE, TRUE)
-  s <- ifelse(addmargins(table(x,y))[length(levels(x)) + 1, ] != 0, FALSE, TRUE)
-  if(any(c(z,s))) TRUE else FALSE
-}
-
-
 #d)
 ## Eine Funktion, die geeignete deskriptive bivariate Statistiken fuer
 ## den Zusammengang zwischen einer metrischen und einer
