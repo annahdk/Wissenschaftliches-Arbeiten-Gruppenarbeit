@@ -1,4 +1,4 @@
-#Gruppenarbeit GitHub Wissenschaftliches Arbeiten\newline
+Gruppenarbeit GitHub Wissenschaftliches Arbeiten\newline
 
 Einführung: \newline
 
