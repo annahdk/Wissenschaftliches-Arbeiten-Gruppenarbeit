@@ -1,16 +1,15 @@
-Gruppenarbeit GitHub Wissenschaftliches Arbeiten\newline
-
-Einführung: \newline
+Gruppenarbeit GitHub Wissenschaftliches Arbeiten
+Einführung: 
 
 
 Gruppenmitglieder:
 
-Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer \newline
+Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer 
 
-Kontakt: romina.dubrow\@tu-dortmund.de \newline
+Kontakt: romina.dubrow\@tu-dortmund.de 
 
-Aktueller Status: \newline
-\textbf{Aufgabe 1} $\surd$ \newline
+Aktueller Status: 
+\textbf{Aufgabe 1} <img src="https://latex.codecogs.com/gif.latex? $\surd$ " />  
 \textbf{Aufgabe 2} $\surd$ \newline
 \textbf{Aufgabe 3} $\surd$ \newline
 \textbf{Aufgabe 4} in Bearbeitung        \newline
