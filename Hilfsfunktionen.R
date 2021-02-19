@@ -31,7 +31,7 @@ swap <- function(x,y) {
 }
 
 
-### Hilfsfunktion fuer ungeordnete Faktoren Aufgabe e)
+### Hilfsfunktion fuer ungeordnete Faktoren Aufgabe e) (wird auch für b) und c) benötigt! :))
 
 Faktor_ordnen <- function(x,ord){
  x <- factor(x,ordered=TRUE, levels=ord)
