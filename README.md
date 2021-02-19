@@ -1,4 +1,4 @@
-Gruppenarbeit GitHub Wissenschaftliches Arbeiten
+#Gruppenarbeit GitHub Wissenschaftliches Arbeiten
 Einführung: 
 
 
@@ -9,34 +9,33 @@ Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Lu
 Kontakt: romina.dubrow\@tu-dortmund.de 
 
 Aktueller Status: 
-\textbf{Aufgabe 1} <img src="https://latex.codecogs.com/gif.latex? $\surd$ " />  
-\textbf{Aufgabe 2} $\surd$ \newline
-\textbf{Aufgabe 3} $\surd$ \newline
-\textbf{Aufgabe 4} in Bearbeitung        \newline
-\textbf{Aufgabe 5}         \newline
+Aufgabe 1 erledigt
+Aufgabe 2 erledigt
+Aufgabe 3 erledigt
+Aufgabe 4 in Bearbeitung       
+Aufgabe 5  
 
-Inhalt: \newline
+Inhalt: 
 Aufgabe 1
-\newline
+
 
 Aufgabe 2
-\newline 
+
 Hochladen des Datensatzes in csv Format
-\newline
+
 Beschreibung des Datensatzes:
-\newline
 
-Aufgabe 3\newline
+
+Aufgabe 3
 Erstellung verschiedener Funktionen zur Analyse des Datensatzes
-Zwei verschiedene Skripte\newline
+Zwei verschiedene Skripte
 
 
-Aufgabe 4 \newline
-
-Aufgabe 5\newline
-
+Aufgabe 4 
+Aufgabe 5
 
 
-Es wurde R und R Studio in diesen Versionen genutzt: \newline
- R Studio 1.2.5042 \newline
+
+Es wurde R und R Studio in diesen Versionen genutzt: 
+ R Studio 1.2.5042 
  R 4.0.3
