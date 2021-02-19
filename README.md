@@ -25,7 +25,7 @@ Hochladen des Datensatzes in csv Format
 
 Aufgabe 3 (bearbeitet von allen Gruppenmitgliedern) <br>
 
-Erstellung eines R-Skripts mit verschiedenen Funktionen zur Analyse des Datensatzes
+Erstellung eines R-Skripts mit verschiedenen Funktionen zur Analyse des Datensatzes <br>
 Erstellung eines R-Skripts mit Helferfunktionen für das erste Skript
 
 Aufgabe 4 (bearbeitet von Leia Betting, Romina Dubrow, Kathrin Henkenherm und Anna Herdick) <br>
