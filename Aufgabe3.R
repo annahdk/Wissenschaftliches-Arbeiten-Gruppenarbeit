@@ -26,8 +26,6 @@ deskr(iris$Sepal.Length)
 deskr(c(NA, 1:10), na.rm = TRUE)  ## mit NA und weitergereichtem na.rm
 
 #b)
-# Eine Funktion, die verschiedene geeignete deskriptive Statistiken
-# für kategoriale Variablen berechnet und ausgibt
 
 deskr_kat <- function(x, ...){
   if(is.factor(x)){               ## Ist Eingabe ein Faktor?
@@ -54,16 +52,6 @@ deskr_kat <- function(x, ...){
   else stop("Funktion erwartet Faktor")
 }
 
-
-## Beispiele:
-
-str(housing$Freq) ## Kardinal
-str(housing$Sat)  ## Ordinal
-str(housing$Type) ## Nominal
-
-deskr_kat(housing$Freq)
-deskr_kat(housing$Sat)
-deskr_kat(housing$Type)
 
 #c) Eine Funktion, die geeignete deskriptive bivariate Statistiken 
 #   für den Zusammenhang zwischen zwei kategorialen Variablen berechnet ausgibt
