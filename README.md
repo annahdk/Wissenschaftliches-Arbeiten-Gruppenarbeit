@@ -19,24 +19,24 @@ Aufgabe 5 in Bearbeitung
 --------------------------------------------------------------------------------
 
 ### Inhalt: <br>
-Aufgabe 1 (bearbeitet von Luca Sauer und Tim Ritter) <br>
+**Aufgabe 1** (bearbeitet von Luca Sauer und Tim Ritter) <br>
 
 Erstellen eines Datensatzes 
 
-Aufgabe 2 (bearbeitet von Luca Sauer und Tim Ritter) <br>
+**Aufgabe 2** (bearbeitet von Luca Sauer und Tim Ritter) <br>
 
 Hochladen des Datensatzes in csv Format
 
-Aufgabe 3 (bearbeitet von allen Gruppenmitgliedern) <br>
+**Aufgabe 3** (bearbeitet von allen Gruppenmitgliedern) <br>
 
 Erstellung eines R-Skripts mit verschiedenen Funktionen zur Analyse des Datensatzes <br>
 Erstellung eines R-Skripts mit Helferfunktionen für das erste Skript
 
-Aufgabe 4 (bearbeitet von Leia Betting, Romina Dubrow, Kathrin Henkenherm und Anna Herdick) <br>
+**Aufgabe 4** (bearbeitet von Leia Betting, Romina Dubrow, Kathrin Henkenherm und Anna Herdick) <br>
 
 Analyse des Datensatzes
 
-Aufgabe 5 (bearbeitet von allen Gruppenmitgliedern) <br>
+**Aufgabe 5** (bearbeitet von allen Gruppenmitgliedern) <br>
 
 Diskussion der Ergebnisse und Erklärung der vorliegenden Zusammenhänge
 
@@ -50,13 +50,13 @@ Es wurde R und R Studio in diesen Versionen genutzt:
 
 ### Dateienliste: <br>
 
-Aufgabe1-Github.R:    Simulation des Datensatzes <br>
+**Aufgabe1-Github.R**:    R-Skript zur Simulation eines Datensatzes von 100 Beobachtungen zu den Variablen _Alter_, _Studienfach_, _Interesse an Mathematik_, _Interesse an Programmieren_ und _Mathe-LK_. <br>
 
-Aufgabe3.R:          Funktionen zur deskreptiven Datenanalyse <br>  
+**Aufgabe3.R**:          Funktionen zur deskreptiven Datenanalyse <br>  
 
-Datensatz.csv:        Datensatz aus Aufgabe 1 <br>
+**Datensatz.csv**:        Datensatz aus Aufgabe 1 in csv Format <br>
 
-Hilfsfunktionen.R:   Verschiedene Hilfsfunktionen für Aufgabe 3<br>
+**Hilfsfunktionen.R**:   Verschiedene Hilfsfunktionen für Aufgabe 3<br>
 
 --------------------------------------------------------------------------------
 
