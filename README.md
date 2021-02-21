@@ -5,7 +5,7 @@ Gruppenmitglieder:
 
 Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer 
 
-Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de
+Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, ... , luca.sauer@tu-dortmund.de
 
 --------------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ Es wurde R und R Studio in diesen Versionen genutzt:
 
 ### Dateienliste: <br>
 
-Aufgabe1-Github.R:    Simulation des Datensatz <br>
+Aufgabe1-Github.R:    Simulation des Datensatzes <br>
 
 Aufgabe3.R:          Funktionen zur deskreptiven Datenanalyse <br>  
 
