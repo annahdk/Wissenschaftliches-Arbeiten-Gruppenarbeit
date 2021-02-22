@@ -62,7 +62,15 @@ Es wurde R und R Studio in diesen Versionen genutzt:
 
 ### Funktionen: 
 
-#### deskr(x,...)
+#### ``deskr(x,...)``
+Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt. <br>
+Die Funktion erwartet die Eingabe eines Vektors von metrischen Daten und berechnet dessen arithmetisches Mittel, den Median, die Varianz, die Standardabweichung, die Range, sowie die 0, 0.25, 0.5, 0.75 und 1 Quantile und gibt die Maßzahlen anschließend aus. Über das "..."-Argument kann beispielsweise mittels na.rm = TRUE der Umgang mit fehlenden Werten an die Funktionen der Maßzahlen durchgereicht werden.
+
+Beispiele:
+
+``deskr(iris\$Sepal.Length)`` <br>
+``deskr(c(NA, 1:10), na.rm = TRUE)``  (mit NA im Datenvektor und weitergereichtem Argument na.rm)
+
 
 #### deskr_kat(x,...): 
 Eine Funktion, die verschiedene geeignete deskriptive Statistiken für kategoriale Variablen berechnet und ausgibt.
