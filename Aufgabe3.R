@@ -203,38 +203,15 @@ e <- function(x, Ordnung=TRUE,...){
   
     cat(" Quantilbasierte Kategorisierung: \n",
       "------------------------\n",
-      "Niedrig:", as.character(q_4), "\n",
-      "Mittel:", as.character(box), "\n",
-      "Hoch:", as.character(q4), "\n",
+      "Niedrig:", as.character(unique(q_4)), "\n",
+      "Mittel:", as.character(unique(box)), "\n",
+      "Hoch:", as.character(unique(q4)), "\n",
       " ------------------------\n")
   
 }
 
 
 
-### Beispiel fuer ordinalen Vektor
-
-## zum Testen, koennen wir dann auch wieder rausnehmen
-# Faktor (geordnet)
-#Akademisch <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
-#Akademisch1 <- factor(Akademisch,ordered=TRUE, levels=unique(Akademisch))
-
-#Faktor(ungeordnet)
-#Akademisch2 <- factor(Akademisch)
-
-
-# Character -> muss noch geordnet werden
-#Akademisch3 <- c("Hauptschul","Realschul","Gymnasial","Hauptschul","Bachelor","Master","Dr","Prof")
-
-# Metrisch
-#Zahlen <- 1:15
-
-
-#e(Akademisch1)
-#e(Akademisch2, Ordnung=FALSE, ord= unique(Akademisch))
-#e(Akademisch3)
-#e(Zahlen)
-########################
 
 
 #f) Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
