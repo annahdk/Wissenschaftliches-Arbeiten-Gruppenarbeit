@@ -2,8 +2,8 @@
 # Funktionen
 
 #a)
-## Eine Funktion, die verschiedene geeignete deskriptive Statistiken
-## für metrische Variablen berechnet und ausgibt
+# Eine Funktion, die verschiedene geeignete deskriptive Statistiken
+# für metrische Variablen berechnet und ausgibt
 
 deskr <- function(x, ...){
   cat(" Deskriptive Statistiken: \n",
@@ -65,12 +65,13 @@ deskr_kat(housing$Freq)
 deskr_kat(housing$Sat)
 deskr_kat(housing$Type)
 
-#c) Eine Funktion, die geeignete deskriptive bivariate Statistiken 
-#   für den Zusammenhang zwischen zwei kategorialen Variablen berechnet ausgibt
+#c) 
+# Eine Funktion, die geeignete deskriptive bivariate Statistiken 
+# für den Zusammenhang zwischen zwei kategorialen Variablen berechnet ausgibt
 
 
 # alle kategoriellen Daten muessen hierfuer Faktoren und ordinale Daten zusaetzlich
-# bereits richtig in R geordnet sein
+# bereits richtig in R geordnet sein (kann mithilfe der Hilfsfunktion Faktor_ordnen geschehen)
 
 
 
@@ -80,14 +81,14 @@ zus_kat <- function(x, y){
       library(GoodmanKruskal)             
       x <- as.numeric(x)
       y <- as.numeric(y)
-      cat("Ordinales Merkmal:\n",
+      cat("Ordinale Merkmale:\n",
           "Rangkorrelationskoeffizienten nach...\n",
           "...Spearman:", cor(x,y, method = "spearman"), 
           "\n ...Kendall:", cor(x,y, method = "kendall"), 
           "\n ...Goodman und Kruskal:", GKtau(x,y)$tauxy, "\n")
     }
     else{                                         ## Nominal
-      cat("Nominales Merkmal:\n",
+      cat("Nominale Merkmale:\n",
           "Kontingenzkoeffizienten...\n")
       if(length(levels(x)) == 2 && length(levels(y)) == 2){     ## beide dichotom?
         cat(if(null(x,y) == FALSE){"...nach Yule:"}, if(null(x,y) == FALSE){yule(x,y)}, "\n...Phi:", phi(x,y))
