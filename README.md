@@ -89,7 +89,12 @@ deskr_kat(housing\$Type)<br>
 
 #### deskr_d(x,y)
 
-#### e(x,Ordnung=TRUE)
+#### e(x,Ordnung=TRUE,...)
+Eine Funktion, die eine Variable (ordinal oder metrisch) quantilbasiert in die drei Kategorien "Niedrig", "Mittel" und "Hoch" einordnet. 
+Die Funktion erwartet die Variable als Argument x, die den Datentyp character, factor, numeric oder integer hat. Wenn x nicht den Datentyp Faktor beinhaltet, wird die Variable in einen geordneten Faktor umgewandelt. Wenn der Faktor noch nicht geordnet ist, kann man zusätzlich das Argument Ordnung=FALSE angeben. Dann kann mit dem Argument ord die gewünschte Ordnung des Faktors angegeben werden und die Variable x wird mit der Hilfsfunktion Faktor_ordnen(x,ord) in einen geordneten Faktor umgewandelt.
+
+Beispiel: <br>
+e(Cars93$Cylinders,Ordnung = FALSE, ord = levels(Cars93$Cylinders)) 
 
 #### katVis(x,y,z,w=NULL):
 Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt. <br>
