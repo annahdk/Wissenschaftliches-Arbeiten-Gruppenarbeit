@@ -5,7 +5,7 @@ Gruppenmitglieder:
 
 Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer 
 
-Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, kathrin.henkenherm\@tu-dortmund.de, ... , luca.sauer@tu-dortmund.de
+Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, kathrin.henkenherm\@tu-dortmund.de, anna.herdick\@tu-dortmund.de, ... , luca.sauer@tu-dortmund.de
 
 --------------------------------------------------------------------------------
 
@@ -52,7 +52,7 @@ Es wurde R und R Studio in diesen Versionen genutzt:
 
 **Aufgabe1-Github.R**:    R-Skript zur Simulation eines Datensatzes von 100 Beobachtungen zu den Variablen _Alter_, _Studienfach_, _Interesse an Mathematik_, _Interesse an Programmieren_ und _Mathe-LK_. <br>
 
-**Aufgabe3.R**:          Funktionen zur deskreptiven Datenanalyse <br>  
+**Aufgabe3.R**:          Funktionen zur deskriptiven Datenanalyse <br>  
 
 **Datensatz.csv**:        Datensatz aus Aufgabe 1 in csv Format <br>
 
@@ -86,6 +86,8 @@ deskr_kat(housing\$Sat)<br>
 deskr_kat(housing\$Type)<br>
 
 #### zus_kat(x,y)
+Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammenhang zwischen zwei kategorialen Variablen berechnet und ausgibt.
+Die Funktion erwartet die Eingabe zweier Vektoren von faktoriellen Daten und berechnet im Falle einer ordinalen Variable die Rangkorrelationskoeffizienten nach Spearman, Kendall und Goodman und Kruskal, im Falle einer nominalen Variable die Kontingenzkoeffizienten nach Yule, Phi, nach Cramér und nach Pearson, letzteren unkorrigiert und korrigiert. 
 
 #### deskr_d(x,y)
 
@@ -116,7 +118,6 @@ katVis(w,z)<br>
 ### Hilfsfunktionen:
 
 #### phi_str(x):
-
 Berechnet das Phi-Streuungsmaß für einen Faktor
 
 #### swap(x,y):
@@ -124,16 +125,28 @@ Vertauscht die Werte der Variable x mit denen der Variable y
 
 #### Faktor_ordnen(x,ord)
 
+#### null(x,y)
+Diese Funktion überprüft für eine Kontingenztafel, ob eine Nullzeile vorhanden ist, 
+da dies ein Ausschlusskriterium für die Berechnung des Yule-Koeffizienten ist.
+
+Kontingenzkoeffizienten für nominale Daten: 
+
 #### phi(x,y)
+Phi-Koeffizient
 
 #### chi(x,y)
+Chi^2-Koeffizient
 
 #### cramer(x,y)
+Cramérs Kontingenzindex
 
 #### pears(x,y)
+Pearsons Kontingenzindex
 
 #### pears.korr(x,y)
+korrigierter Pearson Index
 
 #### yule(x,y)
+Kontingenzkoeffizient nach Yule
 
-#### null(x,y)
+
