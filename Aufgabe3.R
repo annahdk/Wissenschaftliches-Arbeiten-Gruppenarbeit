@@ -2,8 +2,6 @@
 # Funktionen
 
 #a)
-## Eine Funktion, die verschiedene geeignete deskriptive Statistiken
-## für metrische Variablen berechnet und ausgibt
 
 deskr <- function(x, ...){
   cat(" Deskriptive Statistiken: \n",
@@ -21,9 +19,6 @@ deskr <- function(x, ...){
   cat(" ------------------------\n")
 }
 
-## Beispiele:
-deskr(iris$Sepal.Length)
-deskr(c(NA, 1:10), na.rm = TRUE)  ## mit NA und weitergereichtem na.rm
 
 #b)
 
