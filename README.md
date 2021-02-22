@@ -5,7 +5,7 @@ Gruppenmitglieder:
 
 Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer 
 
-Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, ... , luca.sauer@tu-dortmund.de
+Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, kathrin.henkenherm\@tu-dortmund.de, ... , luca.sauer@tu-dortmund.de
 
 --------------------------------------------------------------------------------
 
@@ -83,7 +83,20 @@ deskr_kat(housing\$Type)<br>
 
 #### e(x,Ordnung=TRUE)
 
-#### katVis(x,y,z,w=NULL)
+#### katVis(x,y,z,w=NULL):
+Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt. <br>
+Die Funktion erwartet als Eingabe drei oder vier Vektoren der gleichen Länge, die in einem Streudiagramm mittels ggplot2-Funktionen dargestellt werden. Dabei werden die Eingaben so sortiert, dass die Variable mit der geringsten Anzahl Kategorien an letzter Stelle steht, sodass sie, bei drei Eingaben, die Farbe der Punkte bestimmt und bei vier Eingaben die Form der Punkte. Die Punkte werden zusätzlich zur besseren Erkennbarkeit leicht um die eigentlichen Werte gestreut. Für das Vertauschen der Eingaben wird die Hilfsfunktion swap verwendet.
+
+Beispiele:<br>
+x <- factor(sample(rep(letters[1:4], 10), 30))<br>
+y <- ordered(sample(rep(1:7, 10), 30))<br>
+z <- ordered(sample(rep(1:7, 10), 30))<br>
+w <- factor(sample(rep(0:1, 100), 30))<br>
+
+katVis(x,y,z,w)<br>
+katVis(x,y,z)<br>
+katVis(w,y,z,x)<br>
+katVis(w,z)<br>
 
 --------------------------------------------------------------------------------
 
@@ -93,7 +106,8 @@ deskr_kat(housing\$Type)<br>
 
 Berechnet das Phi-Streuungsmaß für einen Faktor
 
-#### swap(x,y)
+#### swap(x,y):
+Vertauscht die Werte der Variable x mit denen der Variable y
 
 #### Faktor_ordnen(x,ord)
 
